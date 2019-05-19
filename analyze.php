@@ -33,7 +33,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
     <meta name="author" content="">
     <link rel="icon" href="#">
 
-	<title>Universitas Mulia</title>
+	<title>Azure Computer Vision</title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
@@ -59,7 +59,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
         }
 
         .nav-link {
-            color : white;
+            color : blue;
         }
 
         .starter-template {
@@ -80,7 +80,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
             z-index: 2;
             position: relative;
             margin-top: -59px;
-            background-color: white;
+            background-color: blue;
 			padding-top : 0!important;
             padding: 30px;
             border-radius: 9px;
@@ -90,7 +90,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 			padding: 13px;
 			background-image: linear-gradient(to right,#17a3de, #20BDFF);
 			box-shadow: -4px 5px 3px gainsboro;
-			color: white;
+			color: blue;
 		}
     </style>
   </head>

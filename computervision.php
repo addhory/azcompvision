@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
         }
 
         .nav-link {
-            color : white;
+            color : blue;
         }
 
         h1 {
