@@ -50,20 +50,18 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
     <style>
 	
 		body {
-            background: #cecaca14;
+            background: #FFFF99;
         }
 
         .navbar {
 			padding-left: 170px;
-            background-image: linear-gradient(to right, #56CCF2, #2F80ED);
         }
 
         .nav-link {
-            color : blue;
+            color : white;
         }
 
         .starter-template {
-            background-image: linear-gradient(to right, #56CCF2, #2F80ED);
             position: relative;
             z-index: 1;
         }
@@ -80,7 +78,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
             z-index: 2;
             position: relative;
             margin-top: -59px;
-            background-color: blue;
+            background-color: white;
 			padding-top : 0!important;
             padding: 30px;
             border-radius: 9px;
@@ -90,7 +88,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 			padding: 13px;
 			background-image: linear-gradient(to right,#17a3de, #20BDFF);
 			box-shadow: -4px 5px 3px gainsboro;
-			color: blue;
+			color: white;
 		}
     </style>
   </head>
