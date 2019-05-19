@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
     <style>
     
         .navbar {
-            background-image: linear-gradient(to right, #56CCF2, #2F80ED);
+            background-image: linear-gradient(to right, #999900, #FFFFCC);
         }
 
         .nav-link {
