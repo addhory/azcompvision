@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
             <meta name="author" content="">
             <link rel="icon" href="#">
 
-            <title>Universitas Mulia</title>
+            <title>Azure Computer Vision</title>
 
             <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
 
