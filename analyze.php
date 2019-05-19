@@ -231,28 +231,6 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 	</div>
 
 	<div>
-<h1>Analyze image:</h1>
-Enter the URL to an image, then click the <strong>Analyze image</strong> button.
-<br><br>
-Image to analyze:
-<input type="text" name="inputImage" id="inputImage"
-    value="" />
-<button onclick="processImage()">Analyze image</button>
-<br><br>
-<div id="wrapper" style="width:1020px; display:table;">
-    <div id="jsonOutput" style="width:600px; display:table-cell;">
-        Response:
-        <br><br>
-        <textarea id="responseTextArea" class="UIInput"
-                  style="width:580px; height:400px;"></textarea>
-    </div>
-    <div id="imageDiv" style="width:420px; display:table-cell;">
-        Source image:
-        <br><br>
-        <img id="sourceImage" width="400" />
-    </div>
-</div>
-</div>
 
 
 <!-- Placed at the end of the document so the pages load faster -->
