@@ -89,6 +89,8 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 		.mt-4 {
 			padding: 13px;
 			box-shadow: -4px 5px 3px gainsboro;
+            background-image: linear-gradient(to right, #999900, #FFFFCC);
+
 			color: white;
 		}
     </style>
