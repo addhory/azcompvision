@@ -8,7 +8,7 @@ use MicrosoftAzure\Storage\Blob\Models\ListBlobsOptions;
 use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
-$connectionString = "DefaultEndpointsProtocol=https;AccountName=azurebejo;AccountKey=lUAaDVuJkw4mR793S4YJxLEsu+izo9kI+t/ZCMWTfN1ArphX2UJAgHxsMp31Icpqu84M5VUpq312abNQHK6l4g==;EndpointSuffix=core.windows.net";
+$connectionString = "DefaultEndpointsProtocol=https;AccountName=ridhowebapp;AccountKey=q9FPQpxMvGqO0vSty2pgym3leNhEdYo8CgAOWu/FAEeue7kUr3DnEarkHeFe4+ZBztiHxkO1ZqjioitcJH9uOg==;EndpointSuffix=core.windows.net";
 $containerName = "azurecontainer";
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
@@ -103,7 +103,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
         // **********************************************
  
         // Replace <Subscription Key> with your valid subscription key.
-        var subscriptionKey = "61ef709fade742c789fd8744390f9c56";
+        var subscriptionKey = "16bb515e92cc4988a1c16b8cfb1ecc31";
  
         // You must use the same Azure region in your REST API method as you used to
         // get your subscription keys. For example, if you got your subscription keys
@@ -178,7 +178,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 		<div class="starter-template"> <br><br><br>
         	<div class="container">
 				<h1>Analisis Pribadi</h1>
-					<p class="lead">Pilih Foto Pribadi Anda.<br> Kemudian Click <b>Upload</b>, untuk menganalisa foto pilih <b>analisa</b> pada tabel.</p>
+					<p class="lead">Pilih Foto Yang ingin dianalisa.<br> Kemudian Click <b>Upload</b>, untuk menganalisa foto pilih <b>analisa</b> pada tabel.</p>
 					<span class="border-top my-3"></span> <br> <br><br>
 				</div>
 		</div>
