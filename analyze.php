@@ -55,6 +55,8 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 
         .navbar {
 			padding-left: 170px;
+            background-image: linear-gradient(to right, #FFFFCC, #999900);
+
         }
 
         .nav-link {
@@ -86,7 +88,6 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 
 		.mt-4 {
 			padding: 13px;
-			background-image: linear-gradient(to right,#17a3de, #20BDFF);
 			box-shadow: -4px 5px 3px gainsboro;
 			color: white;
 		}
