@@ -94,7 +94,7 @@ if (isset($_POST['submit'])) {
 "https://southeastasia.api.cognitive.microsoft.com/vision/v2.0/analyze";
             // Request parameters.
             var params = {
-                "visualFeatures": "Categories,Description,Color",
+                "visualFeatures": "Categories,Description,Color,Faces",
                 "details": "",
                 "language": "en",
             };
