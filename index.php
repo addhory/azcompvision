@@ -1,62 +1,150 @@
-<html>
- <head>
- <Title>FORM PENDAFTARAN</Title>
- <!-- UIkit CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+<?php
+if (isset($_POST['submit'])) {
+	if (isset($_POST['url'])) {
+        $url = $_POST['url'];
+	} else {
+		header("Location: analyze.php");
+	}
+} else {
+	header("Location: analyze.php");
+}
+?>
 
-<!-- UIkit JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
- <style type="text/css">
- 	body { background-color: #fff; 
- 	    color: #333; font-size: .85em; margin: 0 20 20 20; padding: 10 20 20 20;
- 	    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
- 	}
- 	h1, h2, h3,{ color: #000; margin-bottom: 0; padding-bottom: 0; }
- 	h1 { font-size: 2.2em; font-weight: 500;}
- 	h2 { font-size: 1.75em; }
- 	h3 { font-size: 1.2em; }
- 	table { margin-top: 0.75em; }
- 	th { font-size: 1.2em; text-align: left; border: none; padding-left: 0; }
- 	td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
-     .uk-container-small {background-color: #ffff; border: 1px solid #78BCC4;  border-radius: 5px; margin: 0 auto; box-shadow :7px 5px 1px #78BCC4; position: relative; margin-top: 22px; margin-bottom: 50px;}
-     .row { margin: 20px;}
-     .red {position: absolute; background-color: #F7444E; width: 50%; height: 35em; border-radius: 7px;}
- </style>
- </head>
- <body>
- <div class="red"></div>
-<div class="uk-container-small ">
-    <div class="row ">
-        <h1>UNIVERSITAS MULIA ABSENSI!</h1>
-        <p>Isi Data yang Nama, NIM and NIK, then click <strong>Submit</strong> to register.</p>
-        <form method="post" action="index.php" enctype="multipart/form-data" class="uk-form-stacked">
-            <div class="uk-margin uk-width-1-2@s">
-                <label class="uk-form-label" for="form-stacked-text">NAMA</label>
-                <div class="uk-form-control">
-                    <input class="uk-input" id="form-stacked-text" type="text" name="nama" id="nama"/>
-                </div>
-            </div>
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name="description" content="">
+            <meta name="author" content="">
+            <link rel="icon" href="#">
 
-            <div class="uk-margin uk-width-1-2@s">
-                <label class="uk-form-label" for="form-stacked-text">NIM</label>
-                <div class="uk-form-control">
-                    <input class="uk-input" id="form-stacked-text" type="text" name="nim" id="nim"/>
-                </div>
-            </div>
+            <title>Universitas Mulia</title>
 
-            <div class="uk-margin uk-width-1-2@s">
-                <label class="uk-form-label" for="form-stacked-text">NIK</label>
-                <div class="uk-form-control">
-                    <input class="uk-input" id="form-stacked-text" type="text" name="nik" id="nik"/>
-                </div>
-            </div>
-            
-            <input class="uk-button uk-button-primary" type="submit" name="submit" value="Submit" />
-            <input class="uk-button" type="submit" name="load_data" value="Load Data" />
-        </form>
-    </div>
+            <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+            <!-- Bootstrap core CSS -->
+            <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+            <!-- Custom styles for this template -->
+            <link href="starter-template.css" rel="stylesheet">
+
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+            <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Maven+Pro|Righteous" rel="stylesheet">
+
+    <style>
+    
+        .navbar {
+            background-image: linear-gradient(to right, #56CCF2, #2F80ED);
+        }
+
+        .nav-link {
+            color : white;
+        }
+
+        h1 {
+            font-family: 'Fredoka One', cursive;
+        }
+
+        .lead {
+            font-family: 'Maven Pro', sans-serif;
+        }
+
+    </style>
+    </head>
+        <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="https://azcomputervision.azurewebsites.net/">Home</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="https://azcomputervision.azurewebsites.net/analyze.php">Analisis Pribadi<span class="sr-only">(current)</span></a>
+			</li>
+		</div>
+		</nav>
+		<main role="main" class="container">
+    		<div class="starter-template"> <br><br><br>
+        		<h1>Hasil Analisis Pribadi</h1>
+				<p class="lead">Berikut merupakan hasil analisis pribadi yang <b>Anda</b> Upload <br> Karakteristik Foto anda ada pada kolom Response.</p>
+				<span class="border-top my-3"></span>
+			</div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+            // **********************************************
+            // *** Update or verify the following values. ***
+            // **********************************************
+            // Replace <Subscription Key> with your valid subscription key.
+            var subscriptionKey = "61ef709fade742c789fd8744390f9c56";
+            // You must use the same Azure region in your REST API method as you used to
+            // get your subscription keys. For example, if you got your subscription keys
+            // from the West US region, replace "westcentralus" in the URL
+            // below with "westus".
+            //
+            // Free trial subscription keys are generated in the "westus" region.
+            // If you use a free trial subscription key, you shouldn't need to change
+            // this region.
+            var uriBase =
+            "https://southeastasia.api.cognitive.microsoft.com/";
+            // Request parameters.
+            var params = {
+                "visualFeatures": "Categories,Description,Color",
+                "details": "",
+                "language": "en",
+            };
+            // Display the image.
+            var sourceImageUrl = "<?php echo $url ?>";
+            document.querySelector("#sourceImage").src = sourceImageUrl;
+            // Make the REST API call.
+            $.ajax({
+                url: uriBase + "?" + $.param(params),
+                // Request headers.
+                beforeSend: function(xhrObj){
+                    xhrObj.setRequestHeader("Content-Type","application/json");
+                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+                },
+                type: "POST",
+                // Request body.
+                data: '{"url": ' + '"' + sourceImageUrl + '"}',
+            })
+            .done(function(data) {
+                // Show formatted JSON on webpage.
+                $("#responseTextArea").val(JSON.stringify(data, null, 2));
+                // console.log(data);
+                // var json = $.parseJSON(data);
+                $("#description").text(data.description.captions[0].text);
+            })
+            .fail(function(jqXHR, textStatus, errorThrown) {
+                // Display error message.
+                var errorString = (errorThrown === "") ? "Error. " :
+                errorThrown + " (" + jqXHR.status + "): ";
+                errorString += (jqXHR.responseText === "") ? "" :
+                jQuery.parseJSON(jqXHR.responseText).message;
+                alert(errorString);
+            });
+        });
+    </script>
+<br>
+<div id="wrapper" style="width:1020px; display:table;">
+	<div id="jsonOutput" style="width:600px; display:table-cell;">
+		<b>Response:</b>
+		<br><br>
+		<textarea id="responseTextArea" class="UIInput"
+		style="width:580px; height:400px;" readonly=""></textarea>
+	</div>
+	<div id="imageDiv" style="width:420px; display:table-cell;">
+		<b>Source Image:</b>
+		<br><br>
+		<img id="sourceImage" width="400" />
+		<br>
+		<h3 id="description">Loading description. . .</h3>
+	</div>
 </div>
- 
- </body>
- </html>
+</body>
+</html>
