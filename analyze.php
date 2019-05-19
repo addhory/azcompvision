@@ -9,7 +9,7 @@ use MicrosoftAzure\Storage\Blob\Models\CreateContainerOptions;
 use MicrosoftAzure\Storage\Blob\Models\PublicAccessType;
 
 $connectionString = "DefaultEndpointsProtocol=https;AccountName=ridhowebapp;AccountKey=q9FPQpxMvGqO0vSty2pgym3leNhEdYo8CgAOWu/FAEeue7kUr3DnEarkHeFe4+ZBztiHxkO1ZqjioitcJH9uOg==;EndpointSuffix=core.windows.net";
-$containerName = "azurecontainer";
+$containerName = "azcompvision";
 // Create blob client.
 $blobClient = BlobRestProxy::createBlobService($connectionString);
 if (isset($_POST['submit'])) {
