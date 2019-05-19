@@ -57,62 +57,6 @@
         </form>
     </div>
 </div>
- <?php
-// PHP Data Objects(PDO) Sample Code:
-try {
-    $conn = new PDO("sqlsrv:server = tcp:azurebejo.database.windows.net,1433; Database = azureisb", "adminbejo", "B3jo2019");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
-}
-
-    if (isset($_POST['submit'])) {
-        try {
-            $nama = $_POST['nama'];
-            $nim = $_POST['nim'];
-            $nik = $_POST['nik'];
-            $date = date("Y-m-d");
-            // Insert data
-            $sql_insert = "INSERT INTO absensi (nama, nim, nik, date) 
-                        VALUES (?,?,?,?)";
-            $stmt = $conn->prepare($sql_insert);
-            $stmt->bindValue(1, $nama);
-            $stmt->bindValue(2, $nim);
-            $stmt->bindValue(3, $nik);
-            $stmt->bindValue(4, $date);
-            $stmt->execute();
-        } catch(Exception $e) {
-            echo "Failed: " . $e;
-        }
-        echo "<h3>Your're registered!</h3>";
-    } else if (isset($_POST['load_data'])) {
-        try {
-            $sql_select = "SELECT * FROM absensi";
-            $stmt = $conn->query($sql_select);
-            $registrants = $stmt->fetchAll(); 
-            if(count($registrants) > 0) {
-                echo "<h2>People who are registered:</h2>";
-                echo "<table>";
-                echo "<tr><th>Nama</th>";
-                echo "<th>Nim</th>";
-                echo "<th>Nik</th>";
-                echo "<th>Date</th></tr>";
-                foreach($registrants as $registrant) {
-                    echo "<tr><td>".$registrant['nama']."</td>";
-                    echo "<td>".$registrant['nim']."</td>";
-                    echo "<td>".$registrant['nik']."</td>";
-                    echo "<td>".$registrant['date']."</td></tr>";
-                }
-                echo "</table>";
-            } else {
-                echo "<h3>No one is currently registered.</h3>";
-            }
-        } catch(Exception $e) {
-            echo "Failed: " . $e;
-        }
-    }
- ?>
+ 
  </body>
  </html>
