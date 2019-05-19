@@ -55,7 +55,7 @@ $result = $blobClient->listBlobs($containerName, $listBlobsOptions);
 
         .navbar {
 			padding-left: 170px;
-            background-image: linear-gradient(to right, #FFFFCC, #999900);
+            background-image: linear-gradient(to right, #999900, #FFFFCC);
 
         }
 
